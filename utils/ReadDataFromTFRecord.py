@@ -19,12 +19,12 @@ class ImageData():
         self.box_to_tensor        = BoxToTensor(input_shape, class_ls, anchor_ls, anchor_mask, reduce_ratio)
         
     def TF_DataPreprocess(self, img, boxes):
-        #if self.random:
-            #img = self.random_hsv(img)
-            #img = self.random_blur(img)
-            #img, boxes = self.random_resize(img, boxes)
-            #img, boxes = self.random_flip(img, boxes)
-            #img, boxes = self.random_rotate(img, boxes)
+        if self.random:
+            img = self.random_hsv(img)
+            img = self.random_blur(img)
+            img, boxes = self.random_resize(img, boxes)
+            img, boxes = self.random_flip(img, boxes)
+            img, boxes = self.random_rotate(img, boxes)
             
         img, boxes = self.img_box_to_inputsize(img, boxes)
         
@@ -77,8 +77,8 @@ class ImageData():
         self.dataset = self.dataset.map(self.TF_DataPreprocess, num_parallel_calls = num_parallel_calls)
         
         # 定義 epochs shuffle_size batch_size
-        #if train:    
-            #self.dataset = self.dataset.shuffle(buffer_size=shuffle_size)
+        if train:    
+            self.dataset = self.dataset.shuffle(buffer_size=shuffle_size)
         
         self.dataset = self.dataset.batch(batch_size)
         #self.dataset = self.dataset.prefetch(buffer_size = batch_size * 1)
