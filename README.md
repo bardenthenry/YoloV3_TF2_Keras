@@ -10,10 +10,10 @@
 ## 訓練步驟
 
 1. 設定資料集位置
-> 1-1. 開啟 config/dataset_config.json
-> 1-2. 將 "img_dir" 項目值改成您目前資料集 JPEGImages 資料夾的路徑
-> 1-3. 將 "annotation_dir" 項目值改成您目前資料集 Annotations 資料夾的路徑
-> 1-4. 存檔後關閉
+> 1-1. 開啟 config/dataset_config.json   
+> 1-2. 將 "img_dir" 項目值改成您目前資料集 JPEGImages 資料夾的路徑   
+> 1-3. 將 "annotation_dir" 項目值改成您目前資料集 Annotations 資料夾的路徑   
+> 1-4. 存檔後關閉   
    
 2. 修改資料集類別
 > 2-1. 開啟 config/model_config.json
