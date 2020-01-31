@@ -5,6 +5,7 @@
 ## 資料集格式
 
 1. 此版本的 YoloV3 目前僅支援 VOC2012 資料集的格式
+2. [VOC2012 資料集官方載點](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar)
 
 ## 訓練步驟
 
