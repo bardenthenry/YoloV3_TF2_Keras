@@ -21,8 +21,8 @@ nvcr.io/nvidia/tensorflow:20.01-tf2-py3
 > 1-4. 存檔後關閉   
    
 2. 修改資料集類別
-> 2-1. 開啟 config/model_config.json
-> 2-2. 將 "class_ls" 項目值改成您目前資料集的所有類別的名稱 list
+> 2-1. 開啟 config/model_config.json   
+> 2-2. 將 "class_ls" 項目值改成您目前資料集的所有類別的名稱 list   
 > 2-3. 存檔後關閉
 
 3. 計算 Anchor Box 長寬比 (如果是使用 VOC2012的資料集可跳過這一步)
