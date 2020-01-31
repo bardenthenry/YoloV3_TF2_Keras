@@ -1,0 +1,11 @@
+{
+    "input_shape"          : [416,416],
+    "anchor_ls"            : [[24, 33], [48, 64], [69, 138], [109, 81], [123, 221], [196, 135], [219, 289], [374, 190], [397, 337]],
+    "anchor_mask"          : [[6,7,8], [3,4,5], [0,1,2]],
+    "class_ls"             : ["aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat", "chair", "cow", "diningtable", "dog", "horse", "motorbike", "person", "pottedplant", "sheep", "sofa", "train", "tvmonitor"],
+    "reduce_ratio"         : [32, 16, 8],
+    "l2_decay"             : 5e-4,
+    "class_method"         : "sigmoid",
+    "alpha"                : 0.1,
+    "iou_thresh"           : 0.5
+}

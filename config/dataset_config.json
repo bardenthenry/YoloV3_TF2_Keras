@@ -1,0 +1,11 @@
+{
+    "img_dir"              : "/Data/VOC2012/VOCdevkit/VOC2012/JPEGImages",
+    "annotation_dir"       : "/Data/VOC2012/VOCdevkit/VOC2012/Annotations",
+    "val_train_ratio"      : 0.1,
+    "hsv_delta"            : [0.1, 0.2, 0.2],
+    "q_delta"              : 0.15,
+    "resize_scale_range"   : [0.8, 1.2],
+    "flip_mode"            : [1,2],
+    "angle_range"          : [-0.15, 0.15],
+    "resize_method"        : "bicubic"
+}

@@ -1,0 +1,14 @@
+{
+    "learning_rate"        : 1e-4,
+    "lr_patient"           : 3,
+    "early_stop_patient"   : 15,
+    "n_epoc"               : 200,
+    "batch_size"           : 64,
+    "num_parallel_calls"   : 14,
+    "pre_model_path"       : null,
+    "model_save_path"      : "./model",
+    "log_dir"              : "./log",
+    "clipvalue"            : 3,
+    "parallel_mode"        : true,
+    "CUDA_VISIBLE_DEVICES" : "0,1"
+}
