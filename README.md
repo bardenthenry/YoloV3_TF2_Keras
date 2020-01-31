@@ -1,5 +1,7 @@
 # 使用說明
 
+此版本的 YoloV3 係參考 qqwweee 版本改寫成 tensorflow 2.0 框架，其中 voc_annotation.py 以及 kmeans.py 這兩個檔案由於時間很趕所以是直接拿他的來用，若有違反規定我馬上徹下！
+
 ## 資料集格式
 
 1. 此版本的 YoloV3 目前僅支援 VOC2012 資料集的格式
