@@ -3,7 +3,7 @@ import tensorflow as tf
 import json
 import numpy as np
 
-from tensorflow.keras.callbacks import TensorBoard, ModelCheckpoint, ReduceLROnPlateau, EarlyStopping
+from tensorflow.keras.callbacks import TensorBoard, ModelCheckpoint, ReduceLROnPlateau, EarlyStopping, TerminateOnNaN
 from utils.ReadDataFromTFRecord import ImageData
 from net.Network import YoloV3
 from net.Module import GradientCallback
@@ -130,6 +130,8 @@ def main():
         verbose=1
     )
     
+    nan_terminate = TerminateOnNaN()
+    
 #     file_writer = tf.summary.create_file_writer("./metrics")
 #     file_writer.set_as_default()
 #     gradient_cb = GradientCallback()
@@ -162,7 +164,7 @@ def main():
             steps_per_epoch = step_train,
             validation_data = val_data.dataset,
             validation_steps = step_val,
-            callbacks = [logging, checkpoint, reduce_lr, early_stopping, gradient_cb]
+            callbacks = [logging, checkpoint, reduce_lr, early_stopping, nan_terminate]
         )
         
     else:

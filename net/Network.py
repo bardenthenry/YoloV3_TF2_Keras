@@ -78,9 +78,9 @@ class YoloV3():
             'y2': YoloLoss(self.anchor_tensor_ls[2], self.x_shape_wh, self.iou_thresh, self.class_method)
         }
         if clipping is None:
-            optimizer = Adam(learning_rate)
+            optimizer = Adam(learning_rate, amsgrad = True)
         else:
-            optimizer = Adam(learning_rate, clipnorm = clipping)
+            optimizer = Adam(learning_rate, clipnorm = clipping, amsgrad = True)
             
         model = Model(inputs=input_tensor, outputs= [y0, y1, y2], name='yolov3')
         model.compile(optimizer, loss = loss_fun)
