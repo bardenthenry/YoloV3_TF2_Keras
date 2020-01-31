@@ -1,13 +1,18 @@
-# 使用說明
+# 分支說明
 
-此版本的 YoloV3 係參考 qqwweee 版本改寫成 tensorflow 2.0 框架，其中 voc_annotation.py 以及 kmeans.py 這兩個檔案由於時間很趕所以是直接拿他的來用，若有違反規定我馬上徹下！
+1. 此版本的 YoloV3 係參考 qqwweee 版本改寫成 tensorflow 2.0 框架，其中 voc_annotation.py 以及 kmeans.py 這兩個檔案由於時間很趕所以是直接拿他的來用，若有違反規定我馬上徹下！
+2. 此版本是在 Nvidia GPU Cloud 的 Docker 容器下撰寫，故直接使用以下容器執行較不會受到環境的影響   
+```
+nvcr.io/nvidia/tensorflow:20.01-tf2-py3
+```
 
-## 資料集格式
+
+# 資料集格式
 
 1. 此版本的 YoloV3 目前僅支援 VOC2012 資料集的格式
 2. [VOC2012 資料集官方載點](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar)
 
-## 訓練步驟
+# 訓練步驟
 
 1. 設定資料集位置
 > 1-1. 開啟 config/dataset_config.json   
