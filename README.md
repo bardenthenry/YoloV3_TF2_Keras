@@ -29,7 +29,7 @@ nvcr.io/nvidia/tensorflow:20.01-tf2-py3
 > 3-1. 執行以下命令之後，會看到根目錄出現 yolo_anchors.txt   
 > ```
 > python3 voc_annotation.py
-> python3 kmeand.py
+> python3 kmeans.py
 > ```
 > 3-2. 開啟 config/model_config.json   
 > 3-3. 將 yolo_anchors.txt 中的長寬比資料輸入到 config/model_config.json 檔案中的 "anchor_ls" 項目   
